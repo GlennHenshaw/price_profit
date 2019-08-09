@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>d3.js practice 5-4</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="d3.js"></script> 
+        <script src="d3-simple-slider.min.js"></script>
+        <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+	</head>
+	<body>
+
+        <div class="container">
+            <div class="page-header">
+                <h1 id="title">Price and Profit</h1> 
+            </div>
+        <p>The new iPhone costs approximately $600. About 4 million iPhones are sold per month. This means that in a given month we might expect Apple to have 2.4 billion dollars in <strong>revenue</strong> from the iPhone. But that money is not all profit. We have to subtract all of the <strong>costs</strong> of production to find Apple's monthly profit.  
+        </p> 
+        <ul>
+            <li><strong>Profit</strong> is revenue minus cost.</li>
+        </ul>
+        <p>There are two types of cost.</p>
+        <ul>
+            <li><strong>Marginal costs (MC)</strong> are the costs of producing each iPhone.</li>
+            <li><strong>Fixed costs (FC)</strong> are costs incured on a regular basis regardless of how many phones are sold. For example, employee salaries and facility costs are fixed costs.</li>
+        </ul>
+        <p>The <strong>demand curve</strong> shows the relationship between the <strong>price</strong> of an item and the quantity demanded, the number of iPhones people are willing to buy. To make things simple for this example we will assume the demand curve is linear. 
+
+        <p>Use the tool below to find the price that will maximize Apple's profit. Try changing the values of the intercept, marginal costs, and fixed costs. Then discuss the questions below.</p>
+        
+        
+
+        <div class="row">
+        <div class="col-md-4">
+            <p class="slider-label">Intercept: $ <span id="intercept">1300</span></p>
+            <div id="slider_intercept" class="slider"></div>
+        </div>
+        <div class="col-md-4">
+            <p class="slider-label">Fixed cost (FC): $ <span id="fixed_cost">20</span></p>
+            <div id="slider_fixed_cost" class="slider"></div>
+        </div>
+        <div class="col-md-4">
+            <p class="slider-label">Marginal Cost (MC): $ <span id="marginal_cost">200</span></p>
+            <div id="slider_marginal_cost" class="slider"></div>
+        </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <div id="chart-area"></div>
+            </div>
+            <div class="col-6">.col-md-4</div>
+        </div>
+
+
+
+        <h3>Discussion questions:</h3>
+        <ol>
+            <li>What is the meaning of the intercept of the demand curve?</li>
+            <li>Suppose the intercept is $1200, fixed cost is ----, and marginal cost is 300. How much should Apple charge for the iphone to maximize their profits?
+            <li>Which of the three varables have no effect on the price that achieves the maxium profit?</li>
+        </ol>
+
+        <a>"Price and profit"</a> by <a href="https://github.com/GlennHenshaw" target="_blank">Glenn Henshaw</a>, <a>LaGuardia Community College, CUNY</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc/4.0" target="_blank">CC BY-NC 4.0</a>
+        
+
+
+
+  </div>
+
+
+
+
+		<script type="text/javascript" src="script.js"></script> 
+	</body>
+</html>
