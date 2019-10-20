@@ -140,6 +140,12 @@ var yAxis_profit = d3.axisLeft(y).ticks(8);
 quant_price.append("g").call(yAxis);
 quant_price.append("g").call(xAxis).attr("transform","translate("+0+","+height+")");
 
+quant_price.append("g").call(yAxis_profit);
+quant_price.append("g").call(xAxis_price).attr("transform","translate("+0+","+height+")");
+
+
+
+
 
 quant_price.append("text")
       .attr("y", -20)
