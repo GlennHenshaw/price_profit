@@ -185,7 +185,7 @@ function profit(p){
 draw_line(1300);                  
 
 function draw_line(val){
-	console.log(val);
+	console.log(vertex);
 	//line.remove();
 	
     line.transition()
