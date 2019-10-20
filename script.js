@@ -150,7 +150,7 @@ quant_price.append("text")
       .attr("x",x(5))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .text("Q (Quantity demanded in millions)");
+      .text("Q (Quantity demanded in millionss)");
 
 var line = quant_price.append("g")
                       .append("line")
