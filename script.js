@@ -35,11 +35,11 @@ var y = d3.scaleLinear()
 
 
 var x_para = d3.scaleLinear()
-          .domain([0,1000])
+          .domain([0,1500])
           .range([0,width]);
 
 var y_para = d3.scaleLinear()
-          .domain([100,1500])
+          .domain([0,1500])
           .range([height,0]);
 
 
@@ -134,8 +134,8 @@ var fixed_slider = d3
 var xAxis = d3.axisBottom(x);
 var yAxis = d3.axisLeft(y).ticks(8);
 
-var xAxis_price = d3.axisBottom(x);
-var yAxis_profit = d3.axisLeft(y).ticks(8);
+var xAxis_price = d3.axisBottom(x_para);
+var yAxis_profit = d3.axisLeft(y_para).ticks(8);
 
 
 quant_price.append("g").call(yAxis);
