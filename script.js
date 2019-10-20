@@ -23,8 +23,7 @@ var quant_price = svg.append('g')
                	"translate("+margin.left+","+margin.bottom+")");
 
 var price_profit = svg2.append('g')
-                     .attr("transform",
-               	"translate("+margin.left+","+margin.bottom+")");
+                     .attr("transform", "translate("+margin.left+","+margin.bottom+")");
 
 var x = d3.scaleLinear()
           .domain([0,10])
@@ -141,12 +140,6 @@ var yAxis_profit = d3.axisLeft(y).ticks(8);
 quant_price.append("g").call(yAxis);
 quant_price.append("g").call(xAxis).attr("transform","translate("+0+","+height+")");
 
-price_profit.append("text")
-      .attr("y", 100)
-      .attr("x",100))
-      .attr("dy", "1em")
-      .style("text-anchor", "middle")
-      .text("Price vs. Profit");
 
 quant_price.append("text")
       .attr("y", -20)
