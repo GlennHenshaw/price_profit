@@ -92,6 +92,7 @@ var marginal_slider = d3
       d3.select('#marginal_cost').text(val);
       marginal = val;
       vertex = (intercept + marginal)/2;
+      draw_line(val);
     });
 
  
