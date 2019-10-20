@@ -145,7 +145,12 @@ price_profit.append("g").call(xAxis_price).attr("transform","translate("+0+","+h
 
 
 
-
+price_profit.append("text)
+            .attr("y", -20)
+            .attr("x",x(5))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Price vs. Profit");
 
 quant_price.append("text")
       .attr("y", -20)
