@@ -6,6 +6,10 @@ var total_height = Math.min(max_height,window.innerHeight);
 
 var svg = d3.select('#chart-area').append('svg')
             .attr("width",total_width)
+            .attr("height",total_height);
+
+var svg2 = d3.select('#chart-area2').append('svg')
+            .attr("width",total_width)
             .attr("height",total_height)
 
 var margin = {top:60,right:30,bottom:30,left:100};
@@ -16,6 +20,10 @@ var height = total_height - margin.top - margin.bottom;
 
 var quant_price = svg.append('g')
                .attr("transform",
+               	"translate("+margin.left+","+margin.bottom+")");
+
+var price_profit = svg2.append('g')
+                     .attr("transform",
                	"translate("+margin.left+","+margin.bottom+")");
 
 var x = d3.scaleLinear()
@@ -126,10 +134,19 @@ var fixed_slider = d3
 var xAxis = d3.axisBottom(x);
 var yAxis = d3.axisLeft(y).ticks(8);
 
+var xAxis_price = d3.axisBottom(x);
+var yAxis_profit = d3.axisLeft(y).ticks(8);
+
+
 quant_price.append("g").call(yAxis);
 quant_price.append("g").call(xAxis).attr("transform","translate("+0+","+height+")");
 
-
+price_profit.append("text")
+      .attr("y", 100)
+      .attr("x",100))
+      .attr("dy", "1em")
+      .style("text-anchor", "middle")
+      .text("Price vs. Profit");
 
 quant_price.append("text")
       .attr("y", -20)
