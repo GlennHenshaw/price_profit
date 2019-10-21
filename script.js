@@ -194,7 +194,8 @@ function draw_line(val){
     price_profit.append("circle")
 	        .attr("cx", x_para(vertex))
 	        .attr("cy", y_para(profit(vertex)))
-	        .attr("r",20);
+	        .attr("r",20)
+	        .attr("fill","#E04836");
 	
     line.transition()
         .attr("x1", 0)     
