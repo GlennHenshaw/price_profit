@@ -41,7 +41,7 @@ var x_para = d3.scaleLinear()
           .range([0,width]);
 
 var y_para = d3.scaleLinear()
-          .domain([-100000,100000])
+          .domain([-100,100])
           .range([height,0]);
 
 
@@ -112,7 +112,7 @@ var fixed_slider = d3
     .sliderHorizontal()
     .default(20)
     .min(0)
-    .max(100000)
+    .max(100)
     .step(5)
     .ticks(5)
     .width(200)
