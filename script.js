@@ -109,8 +109,8 @@ var marginal_slider = d3
 var fixed_slider = d3
     .sliderHorizontal()
     .default(20)
-    .min(1000)
-    .max(500000)
+    .min(0)
+    .max(100000)
     .step(5)
     .ticks(5)
     .width(200)
