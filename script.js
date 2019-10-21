@@ -41,7 +41,7 @@ var x_para = d3.scaleLinear()
           .range([0,width]);
 
 var y_para = d3.scaleLinear()
-          .domain([-50000,100000])
+          .domain([-100000,100000])
           .range([height,0]);
 
 
@@ -218,11 +218,11 @@ function draw_line(val){
 	
     
 	
-    pathData = lineGenerator([[x_para(vertex-200),y_para(profit(vertex-200))],
+    pathData = lineGenerator([[x_para(vertex-300),y_para(profit(vertex-300))],
 	                      [x_para(vertex-100),y_para(profit(vertex-100))],
 			      [x_para(vertex),y_para(profit(vertex))],
 			     [x_para(vertex+100),y_para(profit(vertex+100))],
-			     [x_para(vertex+200),y_para(profit(vertex+200))]]);
+			     [x_para(vertex+300),y_para(profit(vertex+300))]]);
     
     path.attr('d', pathData)
 	.attr("stroke","#999")
