@@ -24,6 +24,8 @@ var quant_price = svg.append('g')
 
 var price_profit = svg2.append('g')
                      .attr("transform", "translate("+margin.left+","+margin.bottom+")");
+var data;
+var pathData;
 
 var x = d3.scaleLinear()
           .domain([0,10])
@@ -49,7 +51,7 @@ var fixed = 20;
 var slope = (y(300) - intercept)/x(10);
 var vertex = (intercept + marginal)/2;
 
-
+var path = price_profit.append("path");
 
 var slider = d3
     .sliderHorizontal()
@@ -185,10 +187,9 @@ function profit(p){
 	return (1/slope)*p*p - p*((intercept+marginal)/slope) - fixed + (marginal*intercept)/slope;
 }
 
- var data = d3.range(vertex-100, vertex+100).map(function (d) {
-      return {x:d, y:profit(d)};
-    });
-console.log(data);
+
+var lineGenerator = d3.line()
+	              .curve(d3.curveCardinal);
 
 draw_line(1300);                  
 
@@ -214,4 +215,12 @@ function draw_line(val){
         .attr("y1", y(val))      
         .attr("x2", x(10))     
         .attr("y2", y(300));  
+	
+    data = d3.range(vertex-100, vertex+100).map(function (d) {
+      return {x:d, y:profit(d)};
+    });
+    pathData = lineGenerator(data);
+    
+    path.attr('d', pathData);
+	
 }
