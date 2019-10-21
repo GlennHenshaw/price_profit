@@ -191,6 +191,11 @@ function draw_line(val){
 	console.log(profit(vertex));
 	//line.remove();
 	
+    price_profit.append("circle")
+	        .attr("cx", x_para(vertex))
+	        .attr("cy", y_para(profit(vertex)))
+	        .attr("r",20);
+	
     line.transition()
         .attr("x1", 0)     
         .attr("y1", y(val))      
