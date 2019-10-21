@@ -219,9 +219,11 @@ function draw_line(val){
     
 	
     pathData = lineGenerator([[x_para(vertex-300),y_para(profit(vertex-300))],
+			      [x_para(vertex-200),y_para(profit(vertex-200))],
 	                      [x_para(vertex-100),y_para(profit(vertex-100))],
 			      [x_para(vertex),y_para(profit(vertex))],
 			     [x_para(vertex+100),y_para(profit(vertex+100))],
+			      [x_para(vertex+200),y_para(profit(vertex+200))],
 			     [x_para(vertex+300),y_para(profit(vertex+300))]]);
     
     path.attr('d', pathData)
