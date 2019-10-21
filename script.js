@@ -206,7 +206,7 @@ function draw_line(val){
 	        .attr("class","circle")
 	        .attr("cx", x_para(vertex))
 	        .attr("cy", y_para(profit(vertex)))
-	        .attr("r",3)
+	        .attr("r",4)
 	        .attr("opacity",1)
 	        .attr("fill","#E04836");
 	
@@ -227,8 +227,9 @@ function draw_line(val){
 			     [x_para(vertex+300),y_para(profit(vertex+300))]]);
     
     path.attr('d', pathData)
-	.attr("stroke","#999")
-	.attr("fill","none");
+	.attr("fill","none")
+	.style("stroke", "steelblue")
+        .style("stroke-width","3");
 
 	
 }
