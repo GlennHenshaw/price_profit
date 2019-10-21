@@ -216,10 +216,11 @@ function draw_line(val){
         .attr("x2", x(10))     
         .attr("y2", y(300));  
 	
-    data = d3.range(vertex-100, vertex+100).map(function (d) {
-      return {x:d, y:profit(d)};
-    });
-    pathData = lineGenerator(data);
+    
+	
+    pathData = lineGenerator([[vertex-100,profit(vertex-100)],
+			      [vertex,profit(vertex)],
+			     [vertex+100,profit(vertex+100)]]);
     
     path.attr('d', pathData)
 	.attr("stroke","#999");
