@@ -193,13 +193,13 @@ function draw_line(val){
 	
     price_profit.selectAll(".circle")
 	        .transition()
-	        .attr("opacity","0");	
+	        .attr("opacity",0);	
 	
     price_profit.append("circle")
 	        .attr("class","circle")
 	        .attr("cx", x_para(vertex))
 	        .attr("cy", y_para(profit(vertex)))
-	        .attr("r",20)
+	        .attr("r",3)
 	        .attr("opacity",1)
 	        .attr("fill","#E04836");
 	
