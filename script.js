@@ -39,7 +39,7 @@ var x_para = d3.scaleLinear()
           .range([0,width]);
 
 var y_para = d3.scaleLinear()
-          .domain([0,100000])
+          .domain([-50000,100000])
           .range([height,0]);
 
 
