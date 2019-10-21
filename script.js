@@ -118,7 +118,7 @@ var fixed_slider = d3
     .width(200)
     .displayValue(true)
     .on('onchange', v => {
-      d3.select('#fixed_cost').text(v);
+      d3.select('#fixed_cost').text(v + " billion $");
       fixed = v;
       draw_line(intercept);
     });
