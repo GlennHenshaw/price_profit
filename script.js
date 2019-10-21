@@ -1,4 +1,4 @@
-var max_width = 400;
+var max_width = 550;
 var max_height = 250;
 
 var total_width = Math.min(max_width,window.innerWidth);
@@ -12,7 +12,7 @@ var svg2 = d3.select('#chart-area2').append('svg')
             .attr("width",total_width)
             .attr("height",total_height)
 
-var margin = {top:60,right:30,bottom:30,left:100};
+var margin = {top:60,right:30,bottom:30,left:120};
 
 var width = total_width - margin.left - margin.right;
 var height = total_height - margin.top - margin.bottom;
