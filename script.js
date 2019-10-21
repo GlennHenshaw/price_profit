@@ -92,7 +92,7 @@ var marginal_slider = d3
       d3.select('#marginal_cost').text(val);
       marginal = val;
       vertex = (intercept + marginal)/2;
-      draw_line(val);
+      draw_line(intercept);
     });
 
  
@@ -115,9 +115,10 @@ var fixed_slider = d3
     .ticks(5)
     .width(200)
     .displayValue(true)
-    .on('onchange', val => {
-      d3.select('#fixed_cost').text(val);
-      fixed = val;
+    .on('onchange', v => {
+      d3.select('#fixed_cost').text(v);
+      fixed = v;
+      draw_line(intercept);
     });
 
  
@@ -180,8 +181,8 @@ var line = quant_price.append("g")
                       .style("stroke-width","3");
 
 function profit(p){
-	return (p/slope)*(p-intercept) - (marginal)*(p-intercept)/slope;
-	//return (1/slope)*p*p - p*((intercept+marginal)/slope) - fixed + (marginal*intercept)/slope;
+	//return (p/slope)*(p-intercept) - (marginal)*(p-intercept)/slope;
+	return (1/slope)*p*p - p*((intercept+marginal)/slope) - fixed + (marginal*intercept)/slope;
 }
 draw_line(1300);                  
 
