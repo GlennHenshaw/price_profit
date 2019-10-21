@@ -165,10 +165,11 @@ price_profit.append("text")
 
 price_profit.append("text")
       .attr("y", height/2)
-      .attr("x",x(0)-margin.left/2 - 15)
+      .attr("x",x(0)-margin.left/2 - 20)
       .attr("dy", "1em")
       .style("text-anchor", "middle")
-      .text("Profit (in billions of $)");
+      .text("Profit $Bn");
+
 
 quant_price.append("text")
       .attr("y", -20)
