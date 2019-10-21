@@ -191,10 +191,14 @@ function draw_line(val){
 	console.log(profit(vertex));
 	//line.remove();
 	
+    price_profit.selectAll(".circle").attr("opacity",".2");	
+	
     price_profit.append("circle")
+	        .attr("class","circle")
 	        .attr("cx", x_para(vertex))
 	        .attr("cy", y_para(profit(vertex)))
 	        .attr("r",20)
+	        .attr("opacity",1)
 	        .attr("fill","#E04836");
 	
     line.transition()
