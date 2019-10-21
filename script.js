@@ -221,6 +221,8 @@ function draw_line(val){
     });
     pathData = lineGenerator(data);
     
-    path.attr('d', pathData);
+    path.attr('d', pathData)
+	.attr("stroke","#999");
+
 	
 }
