@@ -118,7 +118,7 @@ var fixed_slider = d3
     .width(200)
     .displayValue(true)
     .on('onchange', v => {
-      d3.select('#fixed_cost').text(v + " billion $");
+      d3.select('#fixed_cost').text(v + " billion");
       fixed = v;
       draw_line(intercept);
     });
@@ -199,7 +199,7 @@ var line = quant_price.append("g")
 
 function profit(p){
 	//return (p/slope)*(p-intercept) - (marginal)*(p-intercept)/slope;
-	return (1/slope)*p*p - p*((intercept+marginal)/slope) - fixed + (marginal*intercept)/slope;
+	return (1/slope)*p*p - p*((intercept+marginal)/slope) - 1000*fixed + (marginal*intercept)/slope;
 }
 
 
