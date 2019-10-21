@@ -184,6 +184,12 @@ function profit(p){
 	//return (p/slope)*(p-intercept) - (marginal)*(p-intercept)/slope;
 	return (1/slope)*p*p - p*((intercept+marginal)/slope) - fixed + (marginal*intercept)/slope;
 }
+
+ var data = d3.range(vertex-100, vertex+100).map(function (d) {
+      return {x:d, y:profit(d)};
+    });
+console.log(data);
+
 draw_line(1300);                  
 
 function draw_line(val){
