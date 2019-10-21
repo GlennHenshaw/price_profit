@@ -150,7 +150,7 @@ price_profit.append("g").call(xAxis_price).attr("transform","translate("+0+","+h
 
 
 price_profit.append("text")
-            .attr("y", -20)
+            .attr("y", -25)
             .attr("x",x(5))
             .attr("dy", "1em")
             .style("text-anchor", "middle")
@@ -172,7 +172,7 @@ price_profit.append("text")
 
 
 quant_price.append("text")
-      .attr("y", -20)
+      .attr("y", -25)
       .attr("x",x(5))
       .attr("dy", "1em")
       .style("text-anchor", "middle")
