@@ -156,6 +156,13 @@ price_profit.append("text")
             .style("text-anchor", "middle")
             .text("Price vs. Profit");
 
+price_profit.append("text")
+            .attr("y", height + 20)
+            .attr("x",x(5))
+            .attr("dy", "1em")
+            .style("text-anchor", "middle")
+            .text("Price ($)");
+
 quant_price.append("text")
       .attr("y", -20)
       .attr("x",x(5))
