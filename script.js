@@ -226,7 +226,7 @@ function draw_line(val){
     
     path.attr('d', pathData)
 	.attr("stroke","#999")
-	.attr("fill",none);
+	.attr("fill","none");
 
 	
 }
