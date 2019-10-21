@@ -187,6 +187,7 @@ draw_line(1300);
 
 function draw_line(val){
 	console.log(vertex);
+	console.log(profit(vertex));
 	//line.remove();
 	
     line.transition()
