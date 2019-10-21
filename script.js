@@ -226,7 +226,8 @@ function draw_line(val){
 			      [x_para(vertex+200),y_para(profit(vertex+200))],
 			     [x_para(vertex+300),y_para(profit(vertex+300))]]);
     
-    path.attr('d', pathData)
+    path.transition()
+	 .attr('d', pathData)
 	.attr("fill","none")
 	.style("stroke", "steelblue")
         .style("stroke-width","3");
