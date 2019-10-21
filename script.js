@@ -218,9 +218,9 @@ function draw_line(val){
 	
     
 	
-    pathData = lineGenerator([[vertex-100,profit(vertex-100)],
-			      [vertex,profit(vertex)],
-			     [vertex+100,profit(vertex+100)]]);
+    pathData = lineGenerator([[x_para(vertex-100),y_para(profit(vertex-100))],
+			      [x_para(vertex),y_para(profit(vertex))],
+			     [x_para(vertex+100),y_para(profit(vertex+100))]]);
     
     path.attr('d', pathData)
 	.attr("stroke","#999");
